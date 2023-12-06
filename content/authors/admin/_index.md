@@ -39,7 +39,7 @@ education:
   courses:
     - course: PhD in Artificial Intelligence
       institution: Northwestern University
-      year: 2023-2027
+      year: 2023
     - course: MS in Artificial Intelligence
       institution: Northwestern University
       year: 2022
@@ -53,7 +53,7 @@ job:
     organization: Northwestern University - Feinberg School of Medicine
   role: AI consultant
     organization: IBM
-    year: 2018-2020
+    year: 2020
 
 #   organization:
 #     - course: PhD in Artificial Intelligence
