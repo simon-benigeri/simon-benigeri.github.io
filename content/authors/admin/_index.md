@@ -48,12 +48,12 @@ education:
       year: 2016
 
 # Jobs
-job:
-  role: Machine learning research engineer
-    organization: Northwestern University - Feinberg School of Medicine
-  role: AI consultant
-    organization: IBM
-    year: 2020
+# job:
+# role: Machine learning research engineer
+#   organization: Northwestern University - Feinberg School of Medicine
+# role: AI consultant
+#   organization: IBM
+#   year: 2020
 
 #   organization:
 #     - course: PhD in Artificial Intelligence
