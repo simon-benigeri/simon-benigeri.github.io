@@ -7,7 +7,7 @@ My research focuses on building practical task-oriented dialogue systems . Worki
 Key methods include:
 - Commonsense reasoning and pragmatics  
 - Synthetic data generation for fine-tuning  
-- Agentic workflows  
+- Language model agents 
 - Hybrid architectures that communicate task and domain constraints to an LLM  
 
 ## AI for Cardiology
