@@ -2,14 +2,13 @@
 
 ## Natural Language Processing & Conversational AI
 
-My primary research focuses on building robust and practical task-oriented dialogue systems. Working with Professor Larry Birnbaum, I explore ways to make conversational AI systems more reliable and effective in real-world applications.
+My research focuses on building practical task-oriented dialogue systems . Working with Professor Larry Birnbaum, I aim to improve the reliability and effectiveness of conversational AI by enhancing the semantic capabilities of LLMs and their ability to handle natural and goal-driven conversations.  
 
-Key research areas include:
-
-- Task-oriented Dialogue Systems
-- Natural Language Understanding
-- Dialogue State Tracking
-- Response Generation
+Key methods include:
+- Commonsense reasoning and pragmatics  
+- Synthetic data generation for fine-tuning  
+- Agentic workflows  
+- Hybrid architectures that communicate task and domain constraints to an LLM  
 
 ## AI for Cardiology
 At the **Northwestern Medicine Center for Artificial Intelligence at the Bluhm Cardiovascular Institute (BCVI)**, we focus on leveraging artificial intelligence to advance cardiology, with a particular emphasis on heart failure. Our research aims to enhance patient care through the following areas:  
