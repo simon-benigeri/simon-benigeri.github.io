@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Simon Benigeri</title>
+    <title>Projects - Simon Benigeri</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         * {
@@ -56,6 +56,10 @@
         }
 
         /* Markdown content styling */
+        #content {
+            margin-top: 1rem;
+        }
+
         #content h1 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
@@ -77,30 +81,20 @@
 
         #content ul {
             list-style: none;
-            margin: 0;
+            margin: 0 0 0.75rem 0;
             padding: 0;
         }
 
         #content ul li {
             position: relative;
-            padding-left: 2rem;
-            margin-bottom: 0.15rem;
+            padding-left: 0;
+            margin-bottom: 1rem;
             font-size: 1.1rem;
             line-height: 1.5;
         }
 
         #content ul li:before {
-            content: "•";
-            position: absolute;
-            left: 1rem;
-            color: #2c3e50;
-        }
-
-        /* Research area styling */
-        #content h2:not(:first-of-type) {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #eee;
+            content: none;
         }
 
         /* Links */
@@ -148,7 +142,7 @@
         // Function to fetch and render markdown content
         async function loadMarkdownContent() {
             try {
-                const response = await fetch('research.md');
+                const response = await fetch('projects.md');
                 const markdown = await response.text();
                 document.getElementById('content').innerHTML = marked.parse(markdown);
             } catch (error) {
