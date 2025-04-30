@@ -8,3 +8,6 @@ jsconfig.json
 node_modules/
 go.sum
 .hugo_build.lock
+
+# index_card.html
+index_card.html
