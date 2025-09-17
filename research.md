@@ -2,13 +2,21 @@
 
 ## Natural Language Processing & Conversational AI
 
-My research focuses on building practical task-oriented dialogue systems . Working with Professor Larry Birnbaum, I aim to improve the reliability and effectiveness of conversational AI by enhancing the semantic capabilities of LLMs and their ability to handle natural and goal-driven conversations.  
+My research focuses on building practical task-oriented dialogue systems. Working with Professor Larry Birnbaum, I aim to improve the reliability and effectiveness of conversational AI by enhancing the semantic capabilities of LLMs and their ability to handle natural and goal-driven conversations.  
 
 Key methods include:
 - Commonsense reasoning and pragmatics  
 - Synthetic data generation for fine-tuning  
 - Language model agents 
 - Hybrid architectures that communicate task and domain constraints to an LLM  
+
+## Samsung Research America, AI Center, Language & Personal Intelligence Team — Summer 2025 Research Intern  
+*Focus: On-device AI & small language models (<3B parameters)*  
+
+- Developed novel methods to enhance the reasoning capabilities of small LLMs, enabling deployment on resource-constrained devices.  
+- Built and optimized synthetic data generation pipelines to produce fine-tuning datasets.  
+- Decomposed chain-of-thought (CoT) data into atomic reasoning steps and modeled their interdependencies to improve the quality of reasoning data.
+
 
 ## AI for Cardiology
 At the **Northwestern Medicine Center for Artificial Intelligence at the Bluhm Cardiovascular Institute (BCVI)**, we focus on leveraging artificial intelligence to advance cardiology, with a particular emphasis on heart failure. Our research aims to enhance patient care through the following areas:  
