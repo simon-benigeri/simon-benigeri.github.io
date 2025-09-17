@@ -17,7 +17,6 @@ Key methods include:
 - Built and optimized synthetic data generation pipelines to produce fine-tuning datasets.  
 - Decomposed chain-of-thought (CoT) data into atomic reasoning steps and modeled their interdependencies to improve the quality of reasoning data.
 
-
 ## AI for Cardiology
 At the **Northwestern Medicine Center for Artificial Intelligence at the Bluhm Cardiovascular Institute (BCVI)**, we focus on leveraging artificial intelligence to advance cardiology, with a particular emphasis on heart failure. Our research aims to enhance patient care through the following areas:  
 
