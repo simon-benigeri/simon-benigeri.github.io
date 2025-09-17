@@ -1,7 +1,7 @@
 # Teaching
 
 ## COMP_SCI 337: Introduction to Natural Language Processing
-**Teaching Assistant** (Fall 2024)
+**Teaching Assistant** (Fall 2024, Fall 2025)
 
 This course provides an introduction to the major challenges of, and classical approaches to, Natural Language Processing (NLP) at an advanced undergraduate or beginning graduate level. The course takes a functional approach — motivating data and knowledge representations and algorithms based on the analysis of what is required in order to use language in a variety of fundamental task settings — as well as a phenomenological perspective, describing and analyzing the critical properties of language with respect to these functional requirements.
 
