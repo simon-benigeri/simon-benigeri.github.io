@@ -1,5 +1,11 @@
 # Publications
 
+## 2026
+
+**[Characterizing and assessing robust conversational interaction: Amendments in order specification](https://openreview.net/forum?id=fIn13EH4DG)**  
+Simon Benigeri, Larry Birnbaum  
+*EMNLP 2026 Findings*
+
 ## 2025
 
 **[Evaluating the performance and potential bias of predictive models for the detection of transthyretin cardiac amyloidosis](https://www.jacc.org/doi/10.1016/j.jacadv.2025.101901)**

@@ -8,7 +8,7 @@
 
 ### Summary
 
-Pursuing a Ph.D. in AI at Northwestern, specializing in NLP and conversational AI. Experienced in building AI models for healthcare and industry applications. 2-3 years of applied AI research for cardiology and 3 years of industry experience developing AI systems at IBM.
+Ph.D. Candidate in Artificial Intelligence at Northwestern University, specializing in Natural Language Processing (NLP) and conversational AI. I bring 3 years of AI research experience in cardiology and 3 years of AI industry experience at IBM. Most recently, I interned at **Apple** on the **Siri Speech Innovation** team (Summer 2026) and at **Samsung Research America, AI Center** on the **Language & Personal Intelligence Team** (Summer 2025).
 
 ### Education
 
@@ -36,7 +36,24 @@ Pursuing a Ph.D. in AI at Northwestern, specializing in NLP and conversational A
 
 - Developing robust and practical task-oriented dialogue systems.
 - Exploring methods to make conversational AI systems more reliable in real-world applications.
+- Published: [Characterizing and assessing robust conversational interaction: Amendments in order specification](https://openreview.net/forum?id=fIn13EH4DG) (*EMNLP 2026 Findings*)
 - Published: [A Flash in the Pan: Better Prompting Strategies to Deploy Out-of-the-Box LLMs as Conversational Recommendation Systems](https://scholar.google.com/citations?view_op=view_citation\&hl=en\&user=d1yFT7UAAAAJ\&sortby=pubdate\&citation_for_view=d1yFT7UAAAAJ:2osOgNQ5qMEC)
+
+#### **PhD Intern - Siri Speech, Innovation**
+
+**Apple**\
+*June 2026 - September 2026*
+
+- Added active learning workflows to an automatic prompt-learning framework used by ML practitioners across language and speech tasks.
+- Contributed to training text-to-speech quality judges used to evaluate Siri voice customization.
+
+#### **NLP and AI Research Intern**
+
+**Samsung Research America, AI Center, Language & Personal Intelligence Team**\
+*June 2025 - September 2025*
+
+- Developed a novel method to improve the reasoning capabilities of small large language models (LLMs).
+- Research paper and patent application are in progress.
 
 #### **Research Engineer - Applied AI/ML - Cardiovascular Disease**
 
@@ -56,7 +73,7 @@ Pursuing a Ph.D. in AI at Northwestern, specializing in NLP and conversational A
 
 **COMP\_SCI 337: Introduction to Natural Language Processing**\
 *Northwestern University, Evanston, IL*\
-*Fall 2024*
+*Fall 2024, Fall 2025*
 
 - Assisted students with NLP-related projects and assignments.
 - Led discussions and office hours on NLP fundamentals, dialogue systems, and language understanding.
