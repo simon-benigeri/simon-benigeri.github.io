@@ -36,7 +36,7 @@ Ph.D. Candidate in Artificial Intelligence at Northwestern University, specializ
 
 - Developing robust and practical task-oriented dialogue systems.
 - Exploring methods to make conversational AI systems more reliable in real-world applications.
-- Published: [Characterizing and assessing robust conversational interaction: Amendments in order specification](https://openreview.net/forum?id=fIn13EH4DG) (*EMNLP 2026 Findings*)
+- Published: [Characterizing and assessing robust conversational interaction: Amendments in order specification](https://aclanthology.org/2026.findings-emnlp.1380/) (*EMNLP 2026 Findings*)
 - Published: [A Flash in the Pan: Better Prompting Strategies to Deploy Out-of-the-Box LLMs as Conversational Recommendation Systems](https://scholar.google.com/citations?view_op=view_citation\&hl=en\&user=d1yFT7UAAAAJ\&sortby=pubdate\&citation_for_view=d1yFT7UAAAAJ:2osOgNQ5qMEC)
 
 #### **PhD Intern - Siri Speech, Innovation**

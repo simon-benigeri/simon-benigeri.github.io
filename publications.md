@@ -2,7 +2,7 @@
 
 ## 2026
 
-**[Characterizing and assessing robust conversational interaction: Amendments in order specification](https://openreview.net/forum?id=fIn13EH4DG)**  
+**[Characterizing and assessing robust conversational interaction: Amendments in order specification](https://aclanthology.org/2026.findings-emnlp.1380/)**  
 Simon Benigeri, Larry Birnbaum  
 *EMNLP 2026 Findings*
 
