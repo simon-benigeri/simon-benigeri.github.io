@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teaching - Simon Benigeri</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="description" content="Teaching by Simon Benigeri. Teaching Assistant for CS 337: Introduction to Natural Language Processing at Northwestern University.">
     <style>
         * {
             margin: 0;
@@ -22,7 +22,6 @@
             background-color: #fff;
         }
 
-        /* Navigation */
         nav {
             margin-bottom: 2rem;
             text-align: center;
@@ -56,7 +55,6 @@
             color: #666;
         }
 
-        /* Markdown content styling */
         #content {
             margin-top: 1rem;
         }
@@ -127,14 +125,12 @@
             left: 1rem;
         }
 
-        /* Section styling */
         #content h2:not(:first-of-type) {
             margin-top: 2rem;
             padding-top: 2rem;
             border-top: 1px solid #eee;
         }
 
-        /* Links */
         a {
             color: #000080;
             text-decoration: none;
@@ -147,63 +143,16 @@
             border-bottom-color: #000066;
         }
 
-        /* Strong text */
         #content strong {
             font-weight: 600;
             color: #1a1a1a;
         }
 
-        /* Italic text */
         #content em {
             font-style: italic;
             color: #34495e;
         }
 
-        /* Course styling */
-        .course {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .course:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .course-title {
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .course-title a {
-            color: #000080;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(0, 0, 128, 0.2);
-            transition: all 0.2s ease;
-        }
-
-        .course-title a:hover {
-            color: #000066;
-            border-bottom-color: #000066;
-        }
-
-        /* Project styling */
-        .project {
-            margin-top: 1.5rem;
-        }
-        
-        .project p {
-            margin-bottom: 0.25rem;
-        }
-
-        .project ul {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive design */
         @media (max-width: 768px) {
             body {
                 padding: 1.5rem;
@@ -229,23 +178,57 @@
     </nav>
 
     <div id="content">
-        <!-- Markdown content will be loaded here -->
+        <h1>Teaching</h1>
+
+        <h2>COMP_SCI 337: Introduction to Natural Language Processing</h2>
+        <p><strong>Teaching Assistant</strong> (Fall 2024, Fall 2025)</p>
+
+        <p>This course provides an introduction to the major challenges of, and classical approaches to, Natural Language Processing (NLP) at an advanced undergraduate or beginning graduate level. The course takes a functional approach — motivating data and knowledge representations and algorithms based on the analysis of what is required in order to use language in a variety of fundamental task settings — as well as a phenomenological perspective, describing and analyzing the critical properties of language with respect to these functional requirements.</p>
+
+        <p>The primary focus is on understanding technologies that enable computer use of language as a medium of communication with human beings in natural task settings, and on being able to apply those technologies in such settings.</p>
+
+        <h3>Course Outcomes</h3>
+        <p>Students develop an understanding of:</p>
+        <ul>
+            <li>Major problems and issues in NLP</li>
+            <li>Core technologies and application genres of classical approaches to NLP</li>
+            <li>How and when to utilize these technologies in the development of specific applications</li>
+        </ul>
+
+        <h3>Projects</h3>
+
+        <h4>Golden Globes Tweet Analysis</h4>
+        <p>Build a system that parses tweets and extracts Golden Globes award information:</p>
+        <ul>
+            <li>Ceremony hosts</li>
+            <li>Award categories</li>
+            <li>Presenters mapped to awards</li>
+            <li>Nominees mapped to awards</li>
+            <li>Winners mapped to awards</li>
+        </ul>
+
+        <h4>Recipe Bot</h4>
+        <p>Develop a system that:</p>
+        <ul>
+            <li>Parses online recipes into a useful data representation</li>
+            <li>Features a basic conversational interface for user interaction</li>
+        </ul>
+
+        <h4>Recipe Transformer</h4>
+        <p>Apply various transformations to recipes:</p>
+        <ul>
+            <li>Vegetarian conversion (required)</li>
+            <li>Healthy adaptation (required)</li>
+            <li>Style of cuisine transformation (required)</li>
+            <li>Optional transformations:
+                <ul>
+                    <li>Additional cuisine styles</li>
+                    <li>Portion scaling (double/half)</li>
+                    <li>Cooking method conversion</li>
+                    <li>Dietary restrictions (gluten/lactose-free)</li>
+                </ul>
+            </li>
+        </ul>
     </div>
-
-    <script>
-        // Function to fetch and render markdown content
-        async function loadMarkdownContent() {
-            try {
-                const response = await fetch('teaching.md');
-                const markdown = await response.text();
-                document.getElementById('content').innerHTML = marked.parse(markdown);
-            } catch (error) {
-                console.error('Error loading markdown:', error);
-            }
-        }
-
-        // Load content when the page loads
-        window.addEventListener('load', loadMarkdownContent);
-    </script>
 </body>
-</html> 
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Conversational Robustness: Understanding User Corrections | Simon Benigeri</title>
+    <meta name="description" content="We assess the robustness of LLMs on fast-food order specification in the face of user-initiated amendments. Even flagship models fail on pragmatic inferences required for robust conversational interaction. EMNLP 2026 Findings.">
+    <link rel="canonical" href="https://simonbenigeri.com/research/conversational-robustness.html">
+
+    <!-- Citation metadata for Google Scholar -->
+    <meta name="citation_title" content="Characterizing and assessing robust conversational interaction: Amendments in order specification">
+    <meta name="citation_author" content="Simon Benigeri">
+    <meta name="citation_author" content="Larry Birnbaum">
+    <meta name="citation_conference_title" content="Findings of EMNLP 2026">
+    <meta name="citation_publication_date" content="2026">
+    <meta name="citation_pdf_url" content="https://aclanthology.org/2026.findings-emnlp.1380.pdf">
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "Characterizing and assessing robust conversational interaction: Amendments in order specification",
+        "author": [
+            {"@type": "Person", "name": "Simon Benigeri", "url": "https://simonbenigeri.com"},
+            {"@type": "Person", "name": "Larry Birnbaum"}
+        ],
+        "datePublished": "2026",
+        "publisher": {"@type": "Organization", "name": "Association for Computational Linguistics"},
+        "isPartOf": {"@type": "PublicationEvent", "name": "Findings of EMNLP 2026"},
+        "url": "https://aclanthology.org/2026.findings-emnlp.1380/",
+        "description": "We assess the robustness of large language models (LLMs) on a simple task—fast-food order specification—in the face of user-initiated amendments."
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fff;
+        }
+
+        nav {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 0;
+        }
+
+        nav ul li:before {
+            content: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #666;
+        }
+
+        .paper-header {
+            margin: 2rem 0;
+        }
+
+        .paper-header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .paper-authors {
+            font-size: 1.15rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-venue {
+            font-size: 1.05rem;
+            color: #34495e;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .paper-links a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid #000080;
+            border-radius: 4px;
+            color: #000080;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .paper-links a:hover {
+            background-color: #000080;
+            color: #fff;
+            border-bottom-color: #000080;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin: 2rem 0 0.75rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        h2:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .key-findings ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .key-findings li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .key-findings li:before {
+            content: "•";
+            position: absolute;
+            left: 1rem;
+            color: #2c3e50;
+        }
+
+        a {
+            color: #000080;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 128, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #000066;
+            border-bottom-color: #000066;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+
+            .paper-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../research.html">Research</a></li>
+            <li><a href="../publications.html">Publications</a></li>
+            <li><a href="../teaching.html">Teaching</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="https://github.com/simon-benigeri">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <div class="paper-header">
+        <h1>Characterizing and assessing robust conversational interaction: Amendments in order specification</h1>
+        <p class="paper-authors">Simon Benigeri, Larry Birnbaum</p>
+        <p class="paper-venue">Findings of EMNLP 2026</p>
+        <div class="paper-links">
+            <a href="https://aclanthology.org/2026.findings-emnlp.1380/">ACL Anthology</a>
+            <a href="https://aclanthology.org/2026.findings-emnlp.1380.pdf">PDF</a>
+        </div>
+    </div>
+
+    <h2>Abstract</h2>
+    <p>We assess the robustness of large language models (LLMs) on a simple task—fast-food order specification—in the face of user-initiated amendments. In amending an order, users must communicate, explicitly or implicitly, that a change is being made, the type of change, and what is being changed. We generate synthetic food orders with single amendments, controlling the type of amendment, which components are implicitly or incompletely specified, and the pragmatic inferences required to resolve them.</p>
+
+    <p>On a dataset broadly covering the space of possible combinations, 7 flagship models average 97.7% accuracy. On a more targeted dataset with denser coverage of empirically difficult patterns, accuracy drops to 93.4%, with the hardest combinations dropping below 80% accuracy.</p>
+
+    <p>We also test two further prompting methods: generating an order before interpreting amendments in a turn-taking interaction; and function-calling to parameterize explicit edit operations on the order itself. These somewhat improve performance (+0.2 pp and +3.2 pp respectively), but neither entirely eliminates the failure modes. We also find that asking clarification questions about implicit components improves accuracy on a subset of difficult examples (+5.4 pp), but models ask on only 11% of examples.</p>
+
+    <p>Given the task's deliberate simplicity—small fixed menu, a single standard order, with a single unambiguous amendment—these results illustrate the challenge of robustly performing the pragmatic inferences that real-world conversational interaction demands.</p>
+
+    <h2>The Problem</h2>
+    <p>When users modify orders in conversation ("Actually, make that a large" or "Can I swap the fries for onion rings?"), they rely on implicit context and pragmatic inference. Even though this seems trivial for humans, LLMs struggle with specific combinations of amendment types and implicit references—especially when the user leaves components underspecified or requires pragmatic reasoning to resolve what's being changed.</p>
+
+    <h2>Key Findings</h2>
+    <div class="key-findings">
+        <ul>
+            <li><strong>Flagship models average 97.7% accuracy</strong> on a broad dataset, but drop to <strong>93.4%</strong> on targeted difficult patterns, with the hardest combinations falling <strong>below 80%</strong>.</li>
+            <li><strong>Turn-taking interaction</strong> (generating an order first, then processing amendments) provides marginal improvement (+0.2 pp).</li>
+            <li><strong>Function-calling</strong> (parameterizing explicit edit operations) improves performance more substantially (+3.2 pp), but doesn't eliminate failures.</li>
+            <li><strong>Clarification questions</strong> improve accuracy on difficult examples (+5.4 pp), but models only ask them 11% of the time.</li>
+            <li>Even on a deliberately simple task, LLMs fail at the <strong>pragmatic inferences</strong> that real-world conversational interaction demands.</li>
+        </ul>
+    </div>
+
+    <h2>Why It Matters</h2>
+    <p>Conversational AI systems are increasingly deployed for tasks like food ordering, customer service, and scheduling. These tasks require handling user corrections and amendments robustly. Our work provides a controlled methodology for characterizing where and how LLMs fail at conversational pragmatics, pointing toward what needs to improve for reliable real-world deployment.</p>
+</body>
+</html>

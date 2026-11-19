@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - Simon Benigeri</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="description" content="Research by Simon Benigeri: NLP, conversational AI, LLM robustness, and AI for cardiovascular disease at Northwestern University.">
     <style>
         * {
             margin: 0;
@@ -55,7 +55,6 @@
             color: #666;
         }
 
-        /* Markdown content styling */
         #content h1 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
@@ -68,6 +67,12 @@
             margin: 1.5rem 0 0.5rem;
             font-weight: 500;
             color: #1a1a1a;
+        }
+
+        #content h2:not(:first-of-type) {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
         }
 
         #content p {
@@ -96,14 +101,16 @@
             color: #2c3e50;
         }
 
-        /* Research area styling */
-        #content h2:not(:first-of-type) {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #eee;
+        #content strong {
+            font-weight: 600;
+            color: #1a1a1a;
         }
 
-        /* Links */
+        #content em {
+            font-style: italic;
+            color: #34495e;
+        }
+
         a {
             color: #000080;
             text-decoration: none;
@@ -141,23 +148,49 @@
     </nav>
 
     <div id="content">
-        <!-- Markdown content will be loaded here -->
+        <h1>Research</h1>
+
+        <h2>Natural Language Processing &amp; Conversational AI</h2>
+
+        <p>My research focuses on building practical task-oriented dialogue systems. Working with Professor Larry Birnbaum, I aim to improve the reliability and effectiveness of conversational AI by enhancing the semantic capabilities of LLMs and their ability to handle natural and goal-driven conversations.</p>
+
+        <p>Key methods include:</p>
+        <ul>
+            <li>Commonsense reasoning and pragmatics</li>
+            <li>Synthetic data generation for fine-tuning</li>
+            <li>Language model agents</li>
+            <li>Hybrid architectures that communicate task and domain constraints to an LLM</li>
+        </ul>
+
+        <p><strong>Recent work:</strong> <a href="research/conversational-robustness.html">Characterizing and assessing robust conversational interaction: Amendments in order specification</a> (EMNLP 2026 Findings) — We assess the robustness of LLMs on a simple task—fast-food order specification—in the face of user-initiated amendments, revealing failure modes even in flagship models.</p>
+
+        <h2>Samsung Research America, AI Center, Language &amp; Personal Intelligence Team — Summer 2025 Research Intern</h2>
+
+        <p><em>Focus: On-device AI &amp; small language models (&lt;3B parameters)</em></p>
+        <ul>
+            <li>Developed novel methods to enhance the reasoning capabilities of small LLMs, enabling deployment on resource-constrained devices.</li>
+            <li>Built and optimized synthetic data generation pipelines to produce fine-tuning datasets.</li>
+            <li>Decomposed chain-of-thought (CoT) data into atomic reasoning steps and modeled their interdependencies to improve the quality of reasoning data.</li>
+        </ul>
+
+        <h2>AI for Cardiology</h2>
+
+        <p>At the <strong>Northwestern Medicine Center for Artificial Intelligence at the Bluhm Cardiovascular Institute (BCVI)</strong>, we focus on leveraging artificial intelligence to advance cardiology, with a particular emphasis on heart failure. Our research aims to enhance patient care through the following areas:</p>
+
+        <ul>
+            <li><strong>Natural Language Processing (NLP) for Clinical Text:</strong> Adapting NLP for use in the clinical domain, including information extraction, classification, streamlining clinical trials, and managing guideline-based medication therapies.</li>
+            <li><strong>Risk Prediction Models for Heart Failure:</strong> Developing and validating predictive models to identify heart failure subtypes and associated risks.</li>
+            <li><strong>AI-Driven Echocardiogram Analysis:</strong> Automating echocardiogram analysis with AI, including piloting Ultromics EchoGo Core at BCVI to streamline measurements and support accurate cardiovascular diagnosis.</li>
+        </ul>
+
+        <p><strong>Example Projects:</strong></p>
+        <ul>
+            <li>Predicting heart failure subtypes using large language models (LLMs) and validating these models with external datasets.</li>
+            <li>Utilizing NLP to build structured datasets from diverse clinical text sources, including biopsy reports, imaging reports, and longitudinal data.</li>
+            <li>Diagnosing cardiac amyloidosis from medical imaging data using AI.</li>
+            <li>Predicting the risk of cardiac amyloidosis from both text and structured longitudinal data.</li>
+            <li>Developing de-identification tools for patient data, including anonymizing DICOM images and text from clinical notes.</li>
+        </ul>
     </div>
-
-    <script>
-        // Function to fetch and render markdown content
-        async function loadMarkdownContent() {
-            try {
-                const response = await fetch('research.md');
-                const markdown = await response.text();
-                document.getElementById('content').innerHTML = marked.parse(markdown);
-            } catch (error) {
-                console.error('Error loading markdown:', error);
-            }
-        }
-
-        // Load content when the page loads
-        window.addEventListener('load', loadMarkdownContent);
-    </script>
 </body>
-</html> 
+</html>

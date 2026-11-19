@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Simon Benigeri</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="description" content="Publications by Simon Benigeri, PhD student in AI at Northwestern University. Research in NLP, conversational AI, and cardiovascular AI.">
     <style>
         * {
             margin: 0;
@@ -55,7 +55,6 @@
             color: #666;
         }
 
-        /* Markdown content styling */
         #content {
             margin-top: 1rem;
         }
@@ -74,18 +73,10 @@
             color: #1a1a1a;
         }
 
-        #content h3 {
-            font-size: 1.3rem;
-            margin: 1.2rem 0 0.4rem;
-            font-weight: 500;
-            color: #2c3e50;
-        }
-
-        #content h4 {
-            font-size: 1.1rem;
-            margin: 1rem 0 0.3rem;
-            font-weight: 500;
-            color: #2c3e50;
+        #content h2:not(:first-of-type) {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
         }
 
         #content p {
@@ -93,47 +84,6 @@
             font-size: 1.1rem;
         }
 
-        #content ul {
-            list-style: none;
-            margin: 0 0 0.75rem 0;
-            padding: 0;
-        }
-
-        #content ul li {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 0.15rem;
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        #content ul li:before {
-            content: "•";
-            position: absolute;
-            left: 1rem;
-            color: #2c3e50;
-        }
-
-        #content ul ul {
-            margin: 0.15rem 0 0.25rem;
-        }
-
-        #content ul ul li {
-            padding-left: 2rem;
-        }
-
-        #content ul ul li:before {
-            left: 1rem;
-        }
-
-        /* Publication area styling */
-        #content h2:not(:first-of-type) {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #eee;
-        }
-
-        /* Links */
         a {
             color: #000080;
             text-decoration: none;
@@ -146,13 +96,11 @@
             border-bottom-color: #000066;
         }
 
-        /* Strong text */
         #content strong {
             font-weight: 600;
             color: #1a1a1a;
         }
 
-        /* Italic text */
         #content em {
             font-style: italic;
             color: #34495e;
@@ -183,23 +131,33 @@
     </nav>
 
     <div id="content">
-        <!-- Markdown content will be loaded here -->
+        <h1>Publications</h1>
+
+        <h2>2026</h2>
+
+        <p><strong><a href="research/conversational-robustness.html">Characterizing and assessing robust conversational interaction: Amendments in order specification</a></strong><br>
+        Simon Benigeri, Larry Birnbaum<br>
+        <em>EMNLP 2026 Findings</em> · <a href="https://aclanthology.org/2026.findings-emnlp.1380/">ACL Anthology</a></p>
+
+        <h2>2025</h2>
+
+        <p><strong><a href="https://www.jacc.org/doi/10.1016/j.jacadv.2025.101901">Evaluating the performance and potential bias of predictive models for the detection of transthyretin cardiac amyloidosis</a></strong><br>
+        Jonathan Hourmozdi, Nicholas Easton, <strong>Simon Benigeri</strong>, James D Thomas, Akhil Narang, David Ouyang, Grant Duffy, Ross Upton, Will Hawkes, Ashley Akerman, Ike Okwuosa, Adrienne Kline, Abel N Kho, Yuan Luo, Sanjiv J Shah, Faraz S Ahmad<br>
+        <em>JACC: Advances 4 (8), 2025</em></p>
+
+        <p><strong><a href="https://pubmed.ncbi.nlm.nih.gov/39453355/">Automated identification of heart failure with reduced ejection fraction using deep learning-based natural language processing</a></strong><br>
+        Arash A Nargesi, Philip Adejumo, Lovedeep Singh Dhingra, Benjamin Rosand, Astrid Hengartner, Andreas Coppi, <strong>Simon Benigeri</strong>, Sounok Sen, Tariq Ahmad, Girish N Nadkarni, Zhenqiu Lin, Faraz S Ahmad, Harlan M Krumholz, Rohan Khera<br>
+        <em>JACC Heart Failure 13 (1), 75-87, 2025</em></p>
+
+        <p><strong><a href="https://aclanthology.org/2025.coling-main.561/">A Flash in the Pan: Better Prompting Strategies to Deploy Out-of-the-Box LLMs as Conversational Recommendation Systems</a></strong><br>
+        Gustavo Adolpho Lucas de Carvalho, <strong>Simon Benigeri</strong>, Jennifer Healey, Victor Bursztyn, David Demeter, Lawrence A Birnbaum<br>
+        <em>ACL: Proceedings of the 31st International Conference on Computational Linguistics, 2025</em></p>
+
+        <h2>2023</h2>
+
+        <p><strong><a href="https://aclanthology.org/2023.gem-1.20/">Multi-domain Summarization from Leaderboards to Practice: Re-examining Automatic and Human Evaluation</a></strong><br>
+        David Demeter, Oshin Agarwal, <strong>Simon Benigeri</strong>, Marko Sterbentz, Neil Molino, John M Conroy, Ani Nenkova<br>
+        <em>ACL: Proceedings of the Third Workshop on Natural Language Generation, Evaluation, 2023</em></p>
     </div>
-
-    <script>
-        // Function to fetch and render markdown content
-        async function loadMarkdownContent() {
-            try {
-                const response = await fetch('publications.md');
-                const markdown = await response.text();
-                document.getElementById('content').innerHTML = marked.parse(markdown);
-            } catch (error) {
-                console.error('Error loading markdown:', error);
-            }
-        }
-
-        // Load content when the page loads
-        window.addEventListener('load', loadMarkdownContent);
-    </script>
 </body>
-</html> 
+</html>
